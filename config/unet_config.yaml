@@ -1,0 +1,12 @@
+#预测模型路径
+model_path: ''
+#输入尺寸
+model_img_size:
+  - 512
+  - 512
+  - 3
+#总类别数量，需要加上背景
+num_classes: 21
+#是否将识别结果与原图片混合
+blend: True
+

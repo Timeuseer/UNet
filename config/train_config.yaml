@@ -1,0 +1,36 @@
+#日志文件路径
+log_dir: logs/
+#是否使用eager模式
+eager: True
+#输入图片的尺寸
+inputs_size:
+  - 512
+  - 512
+  - 3
+#总的类别数量，加上背景
+num_classes: 21
+#种类少（几类）时，设置为True
+#种类多（十几类）时，如果batch_size比较大（10以上），那么设置为True
+#种类多（十几类）时，如果batch_size比较小（10以下），那么设置为False
+dice_loss: False
+#数据集路径
+dataset_path: E:\011-Dataset\VOCdevkit\VOC2007\
+#预训练模型的路径
+model_path: ''
+# 冻结阶段训练参数
+Init_Epoch: 0
+Freeze_Epoch: 50
+Freeze_batch_size: 2
+Freeze_lr: 0.0001
+# 解冻阶段训练参数
+UnFreeze_Epoch: 50
+UnFreeze_batch_size: 2
+UnFreeze_lr: 0.0001
+# 是否进行冻结训练
+Freeze_Train: True
+# 是否进行多线程，若为0则不开启多线程，>0则开启多少个线程
+num_workers: 0
+# 训练集路径
+train_path: ImageSets/Segmentation/train.txt
+# 验证集路径
+val_path: ImageSets/Segmentation/val.txt
